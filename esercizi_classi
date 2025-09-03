@@ -1,0 +1,428 @@
+
+
+# class persona(): 
+#     def __init__(self,nome,cognome,età):
+#         self.nome = nome
+#         self.cognome = cognome
+#         self.età = età
+    
+#     def saluta(self):
+#         print(f"ciao sono {self.nome} {self.cognome} e ho {self.età} anni")
+
+
+
+
+# andrea = persona('andrea','mesentsev', 25)
+# andrea.saluta()
+
+# leonid = persona('leonid','mesentsev', 30)
+# leonid.saluta()
+
+
+
+# class ContoBancario():
+#     def __init__(self, intestatario, saldo):
+#         self.intestatario = intestatario 
+#         self.saldo = saldo 
+
+
+
+#     def deposita(self, importo):
+#         self.saldo += importo 
+
+
+
+#     def preleva(self, importo):
+#         if self.saldo >= importo:
+#             self.saldo -= importo 
+#         else:
+#             print("Fondi insufficienti per il prelievo")
+
+
+#     def mostra_saldo(self):
+#         print(f"Il saldo attuale è: {self.saldo} euro")
+        
+
+
+
+# conto = ContoBancario("andrea mesentsev", 1000)
+# conto.deposita(500)
+# conto.mostra_saldo()
+# conto.preleva(200)
+# conto.mostra_saldo()
+
+
+
+
+
+# class Rettangolo():
+    
+#     def __init__(self, base, altezza):
+#         self.base = base
+#         self.altezza = altezza 
+
+
+#     def area(self):
+#         return self.base * self.altezza 
+
+
+#     def perimetro(self):
+#         return 2 * self.base + self.altezza
+    
+
+
+
+# rettangolo = Rettangolo(10, 5)
+
+
+
+# print(rettangolo.base)
+# print(rettangolo.altezza)
+# print(rettangolo.perimetro())
+# print(rettangolo.area())
+
+
+
+
+# class animale():
+#     def __init__ (self, nome, eta):
+#         self.nome = nome
+#         self.eta = eta
+
+#     def verso(self):
+#         pass 
+
+
+# class Cane(animale):
+#     def verso(self):
+#         return "Bau" 
+
+
+# class Gatto(animale):
+#     def verso(self):
+#         return "Meow" 
+
+# a1 = Cane("Fido", 5)
+# print(a1.verso())
+
+# a1 = Gatto("Fido", 5)
+# print(a1.verso())
+
+
+
+
+# class Animale():
+#     def __init__(self, nome, eta):
+#         self.nome = nome
+#         self.eta = eta
+
+#     def verso(self):
+#         pass
+
+#     def __str__ (self):
+#         pass
+        
+#     def __repr__(self):
+#         pass
+
+
+
+#     class Cane(animale):
+#         def __str__ (self):
+#             return f"Nome: {self.nome}, Età: {self.eta}"
+            
+#         def __repr__(self):
+#             return f"Animale({self.nome}, {self.eta})"
+
+#         def verso(self):
+#             return "Bau"
+
+
+#     class Gatto(animale):
+#         def verso(self):
+#             return "Meow"
+
+
+
+# a1 = Cane("Fido", 5)
+# print(a1.verso())
+# print(repr(a1))
+
+# a1 = Gatto("Fido", 5)
+# print(a1.verso())
+
+
+
+
+# class libro ():
+#     def __init__(self, pagine ):
+#         self.pagine = pagine 
+
+
+
+#     def __str__ (self):
+#         return f"libro di '{self.pagine}' pagine "
+    
+
+#     def __len__ (self):
+#         return self.pagine 
+    
+
+
+# libro = libro (100)
+# print(libro)
+
+
+# getters setters properties 
+
+# class peso ():
+#     def __init__ (self, peso): 
+#         self._chili = peso / 1000 # _chili sarebbe un attributo privato 
+
+
+#     def _get_grammi (self): 
+#         return self._chili * 1000
+        
+
+
+
+
+# ereditarietà : 
+
+# class Animale():
+#     pass 
+
+# class cane(Animale):
+#     pass 
+
+# class gatto (Animale): 
+#     pass 
+
+
+
+
+
+# animale = Animale ()
+
+# cane = cane() 
+
+# gatto = gatto() 
+
+# print(isinstance(animale, Animale))
+
+# print(isinstance(animale, cane))
+
+# print(isinstance(cane, cane))
+# print(isinstance(cane, Animale))
+
+# print(isinstance(cane, gatto))
+
+
+
+
+
+
+# class Animale():
+#     pass 
+
+# class cane(Animale):
+#     pass 
+
+# class gatto(Animale): 
+#     pass 
+
+# animale = Animale()
+# cane = cane()
+# gatto = gatto()
+
+# print(isinstance(animale, Animale))  # True: `animale` è un'istanza di `Animale`.
+# print(isinstance(animale, cane))    # False: `animale` non è un'istanza di `cane`.
+# print(isinstance(cane, cane))       # True: `cane` è un'istanza di `cane`.
+# print(isinstance(cane, Animale))    # True: `cane` è un'istanza di `Animale` (ereditarietà).
+# print(isinstance(cane, gatto))      # False: `cane` non è un'istanza di `gatto`.
+
+
+
+
+
+# esercizio legato alla ereditarietà
+
+# class SerieA():
+#     def __init__ (self):
+#       self.paese = "Italia"
+
+
+# class Roma (SerieA):
+#     pass
+
+# squadra = Roma()
+
+# print(isinstance(squadra, SerieA))
+
+
+
+
+
+# # class object 
+
+# class SerieA():
+#    pass 
+
+# # è equivalente a :
+
+# class SerieA(object): 
+#    pass 
+
+# issubclass(SerieA, object) # True
+
+
+
+# metodi per una sottoclasse 
+
+# class Animale():
+#     def __init__ (self, specie):
+#       self.specie = specie 
+
+#     def razza (self):
+#          return f" io sono della specie { self.specie }"
+      
+# class Cane(Animale):
+#    pass 
+
+         
+      
+# a = Animale ("gatto")
+
+# print(a.specie)
+# print(a.razza())
+
+# c = Cane ("cane")
+# print(c.specie)
+
+
+# # proviamo ora a fare un metodo per la sotto classe cane 
+
+# class Animale():
+#     def __init__( self, specie):
+#         self.specie = specie 
+
+#     def razza (self):
+#         return f" io sono della specie {self. specie}" 
+
+# class Cane(Animale):
+#     def abbaia(self):
+#         print("bau bau")
+        
+# class Bassotto (Cane):
+#   pass 
+
+# C = Cane ("cane")
+# C.abbaia()
+
+
+# a = Animale ("gatto")
+# # a.abbaia() # non funziona perchè non è un cane
+
+
+# b = Bassotto ("bassotto")
+# b.abbaia()
+
+
+
+
+
+
+# override ( sovrascrittura)
+
+# class Animale():
+#     def __init__(self, specie):
+#         self.specie = specie 
+
+#     def razza(self):
+#         return f"io sono della specie { self.specie }"
+    
+
+# class Cane(Animale):
+#     def razza (self):
+#         return "bau bau"
+    
+
+
+# a = Animale("gatto")
+# print(a.razza())
+
+# c = Cane("cane")
+# print(c.razza()) # "bau bau"
+
+
+
+
+
+
+
+
+# super (): come delegare alla classe base 
+
+
+# class Animale(): 
+#     def __init__ (self, specie):
+#         self.specie = specie 
+#     def razza(self):
+#         return f"io sono della specie {self.specie }"
+        
+
+
+# class Cane(Animale):
+#     def __init__(self, specie, pelo):
+#        super().__init__(specie)
+#        self.pelo = pelo 
+#     def razza(self):
+#         return "bau bau" 
+    
+    
+
+
+
+
+# C = Cane("cane", pelo = "corto")
+# print(C.razza())
+# print(C.specie)
+
+
+
+# poliformismo: 
+
+class Animale():
+    def __init__(self, specie):
+        self.specie = specie 
+
+    def razza (self):
+        return f"io sono della specie { self.specie}"
+
+
+
+class Cane(Animale):
+    def razza (self):
+        return "bau bau" 
+    
+class Gatto (Animale):
+    def razza(self):
+        return "miao" 
+
+
+
+def blabla(animale):
+    print(animale.razza())
+
+
+c = Cane("pastore")
+g = Gatto("gatto")
+
+blabla(c)
+blabla(g)
+
+
+
+
+
+
